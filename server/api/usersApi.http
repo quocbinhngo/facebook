@@ -1,0 +1,40 @@
+@baseUrl = http://localhost:8000/users
+
+# @name httpRegisterNewAccount
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+    "firstName": "Binh",
+    "lastName": "Ngo",    
+    "email": "karilen9091@doerma.com",
+    "username": "karilen9091",
+    "password": "12345678",
+    "birthYear": 2003 ,
+    "birthMonth": 12,
+    "birthDay": 3,
+    "gender": "male"
+}
+
+### 
+
+# @name httpActivateNewAccount
+POST {{baseUrl}}/activate
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOGI5MDY4NGFmYzU4NGJjNTRlNWRjMyIsImlhdCI6MTY1MzMxMzY0MCwiZXhwIjoxNjUzOTE4NDQwfQ.PgGdeJm2xOC0lKe-_DTuChPKJ4ixr6qfGzOOHs-T1eg"
+}
+
+###
+
+# @name httpLoginToAccount
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "email": "karilen9091@doerma.com",
+    "password": "12345678",
+}
+
+
